@@ -137,20 +137,18 @@ install_dotfiles () {
   done
 }
 
+add_bin_to_path () {
+  info 'Adding bin to PATH'
+
+  bin_path="$(cd dirname(0)/../bin; pwd)"
+  echo "export PATH=$PATH:${bin_path}" >> ~/.bashrc.custom
+
+  success "Added ${bin_path} to PATH"
+}
+
 setup_gitconfig
 install_dotfiles
-
-# If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
-  if source bin/dot > /tmp/dotfiles-dot 2>&1
-  then
-    success "dependencies installed"
-  else
-    fail "error installing dependencies"
-  fi
-fi
+add_bin_to_path
 
 echo ''
 echo '  All installed!'
