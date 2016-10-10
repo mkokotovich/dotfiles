@@ -15,12 +15,8 @@ set-option -g set-titles on
 set -g status-keys vi
 set -g history-limit 10000
 
-# Keep mode-mouse off for better copy/paste support
-# But allow switching panes
-setw -g mode-mouse off
-set-option -g mouse-resize-pane on
-set-option -g mouse-select-pane on
-set-option -g mouse-select-window on
+setw -g mouse on
+bind-key -t vi-copy MouseDragEnd1Pane copy-pipe "xclip -in -selection clipboard"
 
 setw -g mode-keys vi
 setw -g monitor-activity on
