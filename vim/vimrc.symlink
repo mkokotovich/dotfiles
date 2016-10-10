@@ -1,4 +1,13 @@
-syntax on
-
-" Wrap gitcommit file types at the appropriate length
-filetype indent plugin on
+set csprg=gtags-cscope
+set smartindent
+set tabstop=4
+set shiftwidth=4
+"Use tabs (Most NetBackup files)
+"set noexpandtab
+"Use spaces (MSDP files)
+set expandtab
+set t_Co=256
+set textwidth=0
+nnoremap <F3> :set hlsearch!<CR>
+vnoremap // y/<C-R>"<CR>
+"execute pathogen#infect()
