@@ -10,4 +10,4 @@ set t_Co=256
 set textwidth=0
 nnoremap <F3> :set hlsearch!<CR>
 vnoremap // y/<C-R>"<CR>
-"execute pathogen#infect()
+execute pathogen#infect()
