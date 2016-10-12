@@ -140,8 +140,8 @@ install_dotfiles () {
 add_bin_to_path () {
   info 'Adding bin to PATH'
 
-  bin_path="$(cd dirname(0)/../bin; pwd)"
-  echo "export PATH=$PATH:${bin_path}" >> ~/.bashrc.custom
+  bin_path="$(cd $(dirname $0)/../bin; pwd)"
+  echo "export PATH=\${PATH}:${bin_path}" >> ~/.bashrc
 
   success "Added ${bin_path} to PATH"
 }
