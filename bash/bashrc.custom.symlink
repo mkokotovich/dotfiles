@@ -1,1 +1,3 @@
+alias ll="ls -l"
 export PS1="[\u@\h_11 \W]$ "
+source ~/.bash_aliases
