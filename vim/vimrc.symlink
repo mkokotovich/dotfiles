@@ -1,3 +1,4 @@
+syntax on
 set csprg=gtags-cscope
 set smartindent
 set tabstop=4
