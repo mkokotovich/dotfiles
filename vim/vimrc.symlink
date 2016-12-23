@@ -3,7 +3,7 @@ filetype plugin indent on
 syntax on
 set hlsearch
 set csprg=gtags-cscope
-set smartindent
+set autoindent
 set tabstop=4
 set shiftwidth=4
 "Use tabs (Most NetBackup files)
