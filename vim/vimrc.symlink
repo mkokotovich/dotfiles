@@ -14,3 +14,7 @@ set t_Co=256
 set textwidth=0
 nnoremap <F3> :set hlsearch!<CR>
 vnoremap // y/<C-R>"<CR>
+if exists('$TMUX')
+    autocmd BufEnter * call system("tmux rename-window '" . expand("%:t") . "'")
+    autocmd VimLeave * call system("tmux setw automatic-rename")
+endif
