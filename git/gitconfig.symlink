@@ -31,3 +31,9 @@
         default = simple
 [credential]
 	helper = cache --timeout=86400
+[credential "https://stash.veritas.com"]
+	helper = /home/vagrant/git-credential-veritas-stash.pex --autorun
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
