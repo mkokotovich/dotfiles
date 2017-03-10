@@ -1,4 +1,5 @@
 alias ll="ls -l"
+alias grep="grep -n --color=always"
 export PS1="\u@\h:\w$ "
 source ~/.bash_aliases
 # Virtualenv and virtualenvwrapper
