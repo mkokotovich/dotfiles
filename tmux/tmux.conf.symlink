@@ -15,6 +15,10 @@ set -g default-terminal xterm
 set -g status-keys vi
 set -g history-limit 10000
 
+# Use v to begin the selection, use y to copy and end
+bind-key -t vi-copy 'v' begin-selection
+bind-key -t vi-copy 'y' copy-selection
+
 setw -g mouse on
 bind-key -t vi-copy MouseDragEnd1Pane copy-pipe "xclip -in -selection clipboard"
 
