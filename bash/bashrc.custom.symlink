@@ -2,6 +2,7 @@ alias ll="ls -l"
 alias grep="grep --color=always"
 export PS1="\u@\h:\w$ "
 source ~/.bash_aliases
+alias ls='ls -GH'
 # Virtualenv and virtualenvwrapper
 if [ -f "/usr/local/bin/virtualenvwrapper_lazy.sh" ] ; then 
     export WORKON_HOME=~/.venvs
