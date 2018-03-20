@@ -1,11 +1,12 @@
 #!/bin/sh -e
 
-VERSION=6.5
+VERSION=6.6.2
 BASEDIR=~/global/${VERSION}
 INSTALLDIR=~/bin/globalroot
 
 #install ncurses
-sudo yum -y install ncurses ncurses-devel
+#sudo yum -y install ncurses ncurses-devel
+#brew install ncurses
 
 mkdir -p ${BASEDIR}
 pushd $BASEDIR
@@ -17,8 +18,8 @@ tar -zxvf global-${VERSION}.tar.gz
 cd global-${VERSION}
 
 ./configure --prefix=${INSTALLDIR}
-#add libtinfo
-sed -i "s|^LIBS =|LIBS = -ltinfo|g" gtags-cscope/Makefile
+#add libtinfo for linux
+#sed -i "s|^LIBS =|LIBS = -ltinfo|g" gtags-cscope/Makefile
 make
 make install
 
