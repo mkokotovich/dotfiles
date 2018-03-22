@@ -8,3 +8,4 @@ if [ -f "/usr/local/bin/virtualenvwrapper_lazy.sh" ] ; then
     export WORKON_HOME=~/.venvs
     source /usr/local/bin/virtualenvwrapper_lazy.sh
 fi
+if which pyenv-sh-virtualenvwrapper_lazy > /dev/null; then eval "$(pyenv sh-virtualenvwrapper_lazy)"; fi
