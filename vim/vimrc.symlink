@@ -4,7 +4,9 @@ syntax on
 set hlsearch
 set csprg=gtags-cscope
 set autoindent
+set nosmartindent
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 "Use tabs (Most NetBackup files)
 "set noexpandtab
@@ -19,3 +21,9 @@ if exists('$TMUX')
     autocmd VimLeave * call system("tmux setw automatic-rename")
 endif
 let g:python_highlight_all = 1
+
+map Y :Tyank<CR>
+
+" Override some sensible options
+runtime! plugin/sensible.vim
+set laststatus=1

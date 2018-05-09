@@ -3,9 +3,18 @@ alias grep="grep --color=always"
 export PS1="\u@\h:\w$ "
 source ~/.bash_aliases
 alias ls='ls -GH'
+alias dc=docker-compose
 # Virtualenv and virtualenvwrapper
 if [ -f "/usr/local/bin/virtualenvwrapper_lazy.sh" ] ; then 
     export WORKON_HOME=~/.venvs
     source /usr/local/bin/virtualenvwrapper_lazy.sh
 fi
 if which pyenv-sh-virtualenvwrapper_lazy > /dev/null; then eval "$(pyenv sh-virtualenvwrapper_lazy)"; fi
+# This is slow!
+#if [ -f /usr/local/etc/bash_completion ]; then
+#. /usr/local/etc/bash_completion
+#fi
+
+# This is also very slow. Uncomment to work on JS stuff
+#export NVM_DIR="$HOME/.nvm"
+##. "/usr/local/opt/nvm/nvm.sh"
