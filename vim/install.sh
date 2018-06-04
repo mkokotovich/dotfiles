@@ -53,3 +53,20 @@ git clone git://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible
 echo "vim-tbone"
 rm -rf ~/.vim/bundle/vim-tbone
 git clone git://github.com/tpope/vim-tbone.git ~/.vim/bundle/vim-tbone
+
+echo "unimpaired"
+rm -rf ~/.vim/bundle/unimpaired
+git clone https://tpope.io/vim/unimpaired.git ~/.vim/bundle/unimpaired
+vim -u NONE -c "helptags ~/.vim/bundle/unimpaired/doc" -c q
+
+echo "vim-repeat"
+rm -rf ~/.vim/bundle/vim-repeat
+git clone git://github.com/tpope/vim-repeat.git ~/.vim/bundle/vim-repeat
+
+echo "vim-flake8"
+rm -rf ~/.vim/bundle/vim-flake8
+git clone git@github.com:nvie/vim-flake8.git ~/.vim/bundle/vim-flake8
+
+echo "vim-surround"
+rm -rf ~/.vim/bundle/vim-surround
+git clone git@github.com:tpope/vim-surround.git ~/.vim/bundle/vim-surround

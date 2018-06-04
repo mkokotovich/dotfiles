@@ -3,7 +3,6 @@
 #unbind C-b
 #bind-key C-a send prefix
 
-
 # 0 is too far from ` ;)
 set -g base-index 1
 

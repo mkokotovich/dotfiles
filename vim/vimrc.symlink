@@ -24,6 +24,11 @@ let g:python_highlight_all = 1
 
 map Y :Tyank<CR>
 
+autocmd FileType python map <buffer> ,f :call Flake8()<CR>
+" Hit enter to go to first, then use ]q to go forward, [q to go backward
+
 " Override some sensible options
 runtime! plugin/sensible.vim
 set laststatus=1
+
+

@@ -2,6 +2,7 @@ alias ll="ls -l"
 alias grep="grep --color=always"
 export PS1="\u@\h:\w$ "
 source ~/.bash_aliases
+source ~/.bash_secrets
 alias ls='ls -GH'
 alias dc=docker-compose
 # Virtualenv and virtualenvwrapper
