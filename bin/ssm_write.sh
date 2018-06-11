@@ -1,4 +1,5 @@
 #!/bin/bash
+set -euo pipefail
 
 read -p "Please enter path to base directory (e.g. /web/developer-center/api): " path
 read -p "Please enter name of key (e.g. django_secret_key): " name
