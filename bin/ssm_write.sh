@@ -10,7 +10,7 @@ for env in dev stage test prod ; do
     if [ -z ${value} ] ; then
         continue
     fi
-    aws ssm put-parameter --name "${fullname}" --type "SecureString" --value "${value}"
+    aws ssm put-parameter --name "${fullname}" --type "SecureString" --value "${value}" --overwrite
 done
 
 echo "Success!"

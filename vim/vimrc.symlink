@@ -31,4 +31,9 @@ autocmd FileType python map <buffer> ,f :call Flake8()<CR>
 runtime! plugin/sensible.vim
 set laststatus=1
 
+xnoremap @ :<C-u>call ExecuteMacroOverVisualRange()<CR>
 
+function! ExecuteMacroOverVisualRange()
+  echo "@".getcmdline()
+  execute ":'<,'>normal @".nr2char(getchar())
+endfunction

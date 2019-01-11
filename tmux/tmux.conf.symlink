@@ -62,9 +62,12 @@ bind -n S-Right next-window
 bind-key -n C-S-Left swap-window -t -1
 bind-key -n C-S-Right swap-window -t +1
 
-# Ctrl-j, ctrl-k to switch sessions
+# Shift up and down to switch sessions
 bind -n S-Down switch-client -p
 bind -n S-Up switch-client -n
+
+# p to paste buffer in vim
+bind p send-keys "]op" \; pasteb \; send-keys BSpace Escape \; send-keys "^"
 
 # No delay for escape key press
 set -sg escape-time 0

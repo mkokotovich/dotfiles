@@ -70,3 +70,11 @@ git clone git@github.com:nvie/vim-flake8.git ~/.vim/bundle/vim-flake8
 echo "vim-surround"
 rm -rf ~/.vim/bundle/vim-surround
 git clone git@github.com:tpope/vim-surround.git ~/.vim/bundle/vim-surround
+
+echo "diffconflicts"
+rm -rf ~/.vim/bundle/diffconflicts
+git clone git@github.com:whiteinge/diffconflicts.git ~/.vim/bundle/diffconflicts
+git config --global merge.tool diffconflicts
+git config --global mergetool.diffconflicts.cmd 'vim -c DiffConflicts "$MERGED" "$BASE" "$LOCAL" "$REMOTE"'
+git config --global mergetool.diffconflicts.trustExitCode true
+git config --global mergetool.keepBackup false

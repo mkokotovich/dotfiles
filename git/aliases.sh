@@ -11,11 +11,15 @@ alias gc='git commit'
 alias gca='git commit -a'
 alias gco='git checkout'
 alias gcb='git copy-branch-name'
-alias gb='git branch'
+alias gb='git branch --sort=-committerdate'
 alias gs='git status -sb' # upgrade your git if -sb breaks for you. it's fun.
 alias gsu='git status -sb -uno'
 alias gac='git add -A && git commit -m'
 alias gfm='git fetch upstream && git merge upstream/master'
+alias gpm='git pull upstream master --rebase'
+alias gfr='git fetch upstream && git reset --soft upstream/master'
+alias gfrh='git fetch upstream && git reset --hard upstream/master'
 
 # Assuming we have hub installed
 alias hpr='hub pull-request'
+

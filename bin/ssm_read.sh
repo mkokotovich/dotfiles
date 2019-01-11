@@ -16,7 +16,9 @@ for env in ${environments} ; do
 done
 
 if [[ -z "${environments}" ]] ; then
-    aws ssm get-parameters-by-path --path "${path}" --recursive --with-decryption
+    CMD="aws ssm get-parameters-by-path --path ${path} --recursive --with-decryption"
+    echo "Running: ${CMD}"
+    ${CMD}
 fi
 
 echo "Success!"
