@@ -22,4 +22,4 @@ alias gfrh='git fetch upstream && git reset --hard upstream/master'
 
 # Assuming we have hub installed
 alias hpr='hub pull-request'
-
+alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
