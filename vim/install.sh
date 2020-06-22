@@ -24,9 +24,9 @@ echo "Installing python-syntax"
 rm -rf ~/.vim/bundle/python-syntax
 git clone https://github.com/vim-python/python-syntax.git ~/.vim/bundle/python-syntax
 
-echo "Python indenting"
-mkdir -p ~/.vim/indent
-curl -LSso ~/.vim/indent/python.vim https://www.vim.org/scripts/download_script.php?src_id=4316
+echo "Skipping Python indenting, modern vim installations have a better version built in"
+# mkdir -p ~/.vim/indent
+# curl -LSso ~/.vim/indent/python.vim https://www.vim.org/scripts/download_script.php?src_id=4316
 
 echo "vim fugitive"
 rm -rf ~/.vim/bundle/vim-fugitive
@@ -70,6 +70,10 @@ git clone git@github.com:nvie/vim-flake8.git ~/.vim/bundle/vim-flake8
 echo "vim-surround"
 rm -rf ~/.vim/bundle/vim-surround
 git clone git@github.com:tpope/vim-surround.git ~/.vim/bundle/vim-surround
+
+echo ""
+rm -rf ~/.vim/bundle/vim-python-pep8-indent
+git clone https://github.com/Vimjas/vim-python-pep8-indent.git ~/.vim/bundle/vim-python-pep8-indent
 
 echo "diffconflicts"
 rm -rf ~/.vim/bundle/diffconflicts

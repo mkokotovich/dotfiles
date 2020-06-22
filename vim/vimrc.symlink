@@ -21,6 +21,7 @@ if exists('$TMUX')
     autocmd VimLeave * call system("tmux setw automatic-rename")
 endif
 let g:python_highlight_all = 1
+let g:pyindent_searchpair_timeout = 100
 
 map Y :Tyank<CR>
 
