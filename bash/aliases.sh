@@ -6,3 +6,4 @@ alias connect_to_dev='ssh -i ~/.ssh/dev-identity-ecs.pem ec2-user@$(aws ec2 desc
 alias connect_to_test='ssh -i ~/.ssh/test-identity-ecs.pem ec2-user@$(aws ec2 describe-instances --filter "Name=tag-key,Values=Name" "Name=tag-value,Values=test-identity*" --query "Reservations[0].Instances[0].PrivateIpAddress" --output text)'
 alias connect_to_stage='ssh -i ~/.ssh/stage-identity-ecs.pem ec2-user@$(aws ec2 describe-instances --filter "Name=tag-key,Values=Name" "Name=tag-value,Values=stage-identity*" --query "Reservations[0].Instances[0].PrivateIpAddress" --output text)'
 alias connect_to_prod='ssh -i ~/.ssh/prod-identity-ecs.pem ec2-user@$(aws ec2 describe-instances --filter "Name=tag-key,Values=Name" "Name=tag-value,Values=prod-identity*" --query "Reservations[0].Instances[0].PrivateIpAddress" --output text)'
+alias ct='sps-cli cloudtool'

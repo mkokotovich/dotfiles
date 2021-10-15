@@ -20,7 +20,9 @@ alias gpm='git pull upstream main --rebase'
 alias gfr='git fetch upstream && git reset --soft upstream/main'
 alias gfrh='git fetch upstream && git reset --hard upstream/main'
 alias gfrhm='git fetch upstream && git reset --hard upstream/master'
+alias gsquash='git reset $(git merge-base upstream/main $(git rev-parse --abbrev-ref HEAD))'
+alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
 
 # Assuming we have hub installed
-alias hpr='hub pull-request'
-alias gpu='git push --set-upstream origin $(git rev-parse --abbrev-ref HEAD)'
+alias hpr='hub pull-request -b main'
+alias hprm='hub pull-request -b master'
