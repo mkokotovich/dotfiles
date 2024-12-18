@@ -40,19 +40,19 @@ vim -u NONE -c "helptags ~/.vim/bundle/vim-rhubarb/doc" -c q
 
 echo "vim commentary"
 rm -rf ~/.vim/bundle/vim-commentary
-git clone git://github.com/tpope/vim-commentary.git ~/.vim/bundle/vim-commentary
+git clone https://github.com/tpope/vim-commentary.git ~/.vim/bundle/vim-commentary
 
 echo "vim sleuth"
 rm -rf ~/.vim/bundle/vim-sleuth
-git clone git://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
+git clone https://github.com/tpope/vim-sleuth.git ~/.vim/bundle/vim-sleuth
 
 echo "vim-sensible"
 rm -rf ~/.vim/bundle/vim-sensible
-git clone git://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible
+git clone https://github.com/tpope/vim-sensible.git ~/.vim/bundle/vim-sensible
 
 echo "vim-tbone"
 rm -rf ~/.vim/bundle/vim-tbone
-git clone git://github.com/tpope/vim-tbone.git ~/.vim/bundle/vim-tbone
+git clone https://github.com/tpope/vim-tbone.git ~/.vim/bundle/vim-tbone
 
 echo "unimpaired"
 rm -rf ~/.vim/bundle/unimpaired
@@ -61,7 +61,7 @@ vim -u NONE -c "helptags ~/.vim/bundle/unimpaired/doc" -c q
 
 echo "vim-repeat"
 rm -rf ~/.vim/bundle/vim-repeat
-git clone git://github.com/tpope/vim-repeat.git ~/.vim/bundle/vim-repeat
+git clone https://github.com/tpope/vim-repeat.git ~/.vim/bundle/vim-repeat
 
 echo "vim-flake8"
 rm -rf ~/.vim/bundle/vim-flake8
