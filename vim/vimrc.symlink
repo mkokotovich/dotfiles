@@ -38,3 +38,55 @@ function! ExecuteMacroOverVisualRange()
   echo "@".getcmdline()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
+
+"
+" vim-go settings
+"
+" :GoBuild will write the file first
+set autowrite
+" Don't use location lists, use quickfix always
+let g:go_list_type = "quickfix"
+" Show the type in the status bar automatically
+" let g:go_auto_type_info = 1
+" Lower update time for status bar
+" set updatetime=500
+
+" run :GoBuild or :GoTestCompile based on the go file
+function! s:build_go_files()
+  let l:file = expand('%')
+  if l:file =~# '^\f\+_test\.go$'
+    call go#test#Test(0, 1)
+  elseif l:file =~# '^\f\+\.go$'
+    call go#cmd#Build(0)
+  endif
+endfunction
+
+autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+
+" Run file
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+"Run all tests
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+
+"Run the current test function only, instead of running all of them:
+autocmd FileType go nmap <leader>tt <Plug>(go-test-func)
+
+"toggle the coverage profile for the current file:
+autocmd FileType go nmap <leader>c  <Plug>(go-coverage-toggle)
+
+"Show the function signature for a given routine with \ + i:
+autocmd FileType go nmap <leader>i  <Plug>(go-info)
+
+"Show the interfaces a type implements with \ + ii:
+autocmd FileType go nmap <leader>ii  <Plug>(go-implements)
+
+"Find all references of a given type/function in the codebase
+autocmd FileType go nmap <leader>cc  <Plug>(go-referrers)
+
+" Opens GoDeclsDir
+autocmd FileType go nmap <leader>cd  :GoDeclsDir<CR>
+
+" These don't need shortcuts, but I want to remember:
+" gd and ctrl-t go to new defintions, and pop back off the stack
+" K will open documentation
