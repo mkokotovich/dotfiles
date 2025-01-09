@@ -39,6 +39,12 @@ function! ExecuteMacroOverVisualRange()
   execute ":'<,'>normal @".nr2char(getchar())
 endfunction
 
+" Change leader from \ to ,
+let mapleader = ","
+
+" Close quickfix easily
+nmap <leader>cl  :cclose<CR>
+
 "
 " vim-go settings
 "
@@ -50,6 +56,7 @@ let g:go_list_type = "quickfix"
 " let g:go_auto_type_info = 1
 " Lower update time for status bar
 " set updatetime=500
+
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
@@ -81,8 +88,11 @@ autocmd FileType go nmap <leader>i  <Plug>(go-info)
 "Show the interfaces a type implements with \ + ii:
 autocmd FileType go nmap <leader>ii  <Plug>(go-implements)
 
-"Find all references of a given type/function in the codebase
-autocmd FileType go nmap <leader>cc  <Plug>(go-referrers)
+"Find all callers of a given type/function in the codebase
+autocmd FileType go nmap <leader>cc  :GoCallers<CR>:copen<CR>
+
+"Find all references of a given type/function (symbol) in the codebase
+autocmd FileType go nmap <leader>cs  :GoReferrers<CR>:copen<CR>
 
 " Opens GoDeclsDir
 autocmd FileType go nmap <leader>cd  :GoDeclsDir<CR>
