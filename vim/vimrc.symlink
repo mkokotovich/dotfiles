@@ -56,6 +56,8 @@ let g:go_list_type = "quickfix"
 " let g:go_auto_type_info = 1
 " Lower update time for status bar
 " set updatetime=500
+" Format files on save. Defaults to enabled, uncomment to disable
+" let g:go_fmt_autosave = 0
 
 
 " run :GoBuild or :GoTestCompile based on the go file
