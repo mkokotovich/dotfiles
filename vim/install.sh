@@ -53,11 +53,11 @@ git clone https://github.com/tpope/vim-repeat.git ~/.vim/bundle/vim-repeat
 
 echo "vim-flake8 - ,f to run flake8 in python file"
 rm -rf ~/.vim/bundle/vim-flake8
-git clone git@github.com:nvie/vim-flake8.git ~/.vim/bundle/vim-flake8
+git clone https://github.com/nvie/vim-flake8.git ~/.vim/bundle/vim-flake8
 
 echo "vim-surround - change to surrounding quotations, etc"
 rm -rf ~/.vim/bundle/vim-surround
-git clone git@github.com:tpope/vim-surround.git ~/.vim/bundle/vim-surround
+git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
 
 echo "vim-python-pep8-indent - tweaks to python indenting"
 rm -rf ~/.vim/bundle/vim-python-pep8-indent
@@ -65,7 +65,8 @@ git clone https://github.com/Vimjas/vim-python-pep8-indent.git ~/.vim/bundle/vim
 
 echo "diffconflicts"
 rm -rf ~/.vim/bundle/diffconflicts
-git clone git@github.com:whiteinge/diffconflicts.git ~/.vim/bundle/diffconflicts
+git clone https://github.com/whiteinge/diffconflicts.git ~/.vim/bundle/diffconflicts
+
 git config --global merge.tool diffconflicts
 git config --global mergetool.diffconflicts.cmd 'vim -c DiffConflicts "$MERGED" "$BASE" "$LOCAL" "$REMOTE"'
 git config --global mergetool.diffconflicts.trustExitCode true
